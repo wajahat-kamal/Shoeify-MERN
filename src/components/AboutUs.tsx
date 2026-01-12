@@ -1,0 +1,53 @@
+import React from "react";
+import aboutImage from "../assets/about-image.jpg"; // replace with your actual image
+
+const About: React.FC = () => {
+  return (
+    <section id="about-us" className="w-full py-24 bg-[#0A0F1C]">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        {/* Left Image */}
+        <div className="flex-1">
+          <img
+            src={aboutImage}
+            alt="Shoeify premium shoes"
+            className="w-full h-110 rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
+        {/* Right Content */}
+        <div className="flex-1 text-white">
+          <h2
+            className="text-4xl md:text-5xl font-extrabold mb-6"
+            style={{ color: "var(--color-primary)" }}
+          >
+            About Shoeify
+          </h2>
+
+          <p className="text-zinc-300 mb-4 text-lg leading-relaxed">
+            At <span style={{ color: "var(--color-primary)" }}>Shoeify</span>, we
+            believe every step should feel effortless and stylish. Our collection
+            blends cutting-edge design with superior comfort, ensuring that you
+            look good and feel great, whether you’re hitting the streets, the gym,
+            or just relaxing.
+          </p>
+
+          <p className="text-zinc-400 mb-6 text-lg leading-relaxed">
+            From sleek everyday sneakers to high-performance athletic shoes, each
+            pair is crafted with attention to detail, premium materials, and
+            durability that lasts. We’re committed to providing footwear that
+            matches your lifestyle and keeps you moving forward with confidence.
+          </p>
+
+          <button
+            className="px-8 py-3 rounded-full font-semibold text-black transition-all hover:brightness-90"
+            style={{ backgroundColor: "var(--color-primary)" }}
+          >
+            Explore Our Collection
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
