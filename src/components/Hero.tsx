@@ -1,5 +1,6 @@
 import React from "react";
 import bgImage from "../assets/bg-image.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -9,14 +10,21 @@ const Hero = () => {
     >
       {/* Content container */}
       <div className="flex h-full items-center">
-        <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeIn" }}
+          viewport={{ once: true }}
+          className="container mx-auto px-6"
+        >
           <div className="max-w-xl">
             <span className="inline-block mb-4 rounded-full bg-(--color-primary)/30 px-4 py-1 text-sm  tracking-wide text-white">
               New Collection 2026
             </span>
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
-              Step Into <span className="text-(--color-primary)">Style</span> <br />
+              Step Into <span className="text-(--color-primary)">Style</span>{" "}
+              <br />
               With Shoeify
             </h1>
 
@@ -41,7 +49,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
