@@ -34,10 +34,10 @@ const Navbar: React.FC = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="w-full max-w-[950px] rounded-full bg-white/35 dark:bg-white/5 px-6 shadow-lg backdrop-blur-sm"
+        className="w-full max-w-[950px] rounded-full bg-white/35 dark:bg-white/5 px-6 shadow-lg backdrop-blur-sm z-50 relative"
       >
-        <nav className="flex items-center justify-between py-2 text-white">
-          {/* -------- Logo -------- */}
+        <nav className="flex items-center justify-between py-2 text-white relative z-50">
+          {/* Logo */}
           <a
             href="/"
             aria-label="Homepage"
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             <h3>SHOEIFY</h3>
           </a>
 
-          {/* -------- Desktop Menu -------- */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-x-6 text-md">
             {navLinks.map(({ name, href }) => (
               <a
@@ -62,36 +62,36 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* -------- Mobile Toggle -------- */}
+          {/* Mobile Toggle */}
           <button
             onClick={handleToggle}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="md:hidden text-gray-200 hover:text-white transition-colors focus:outline-none z-[60]"
+            className="md:hidden text-gray-200 hover:text-white transition-colors focus:outline-none z-50 relative"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </nav>
       </motion.header>
 
-      {/* ================= Mobile Overlay ================= */}
+      {/* Mobile Overlay */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 md:hidden z-40 bg-black/30 backdrop-blur-sm"
+          className="fixed inset-0 md:hidden z-40 backdrop-blur-sm"
         />
       )}
 
-      {/* ================= Mobile Menu ================= */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <aside className="fixed top-20 right-3 w-48 rounded-xl bg-black/70 border border-white/10 backdrop-blur-xl shadow-lg md:hidden z-50">
+        <aside className="fixed top-20 right-3 w-48 rounded-xl bg-black/70 border border-white/10 backdrop-blur-xl shadow-lg md:hidden z-45">
           <div className="flex flex-col gap-2 p-4">
             {navLinks.map(({ name, href }) => (
               <a
                 key={name}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-200 hover:text-white transition-colors"
+                className="flex items-center gap-3 rounded-md px-3 py-2 text-lg text-gray-200 hover:text-white transition-colors"
               >
                 {name}
               </a>
