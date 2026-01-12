@@ -11,12 +11,12 @@ const Hero = () => {
       <div className="flex h-full items-center">
         <div className="container mx-auto px-6">
           <div className="max-w-xl">
-            <span className="inline-block mb-4 rounded-full bg-yellow-400/10 px-4 py-1 text-sm font-semibold tracking-wide text-yellow-400">
+            <span className="inline-block mb-4 rounded-full bg-(--color-primary)/30 px-4 py-1 text-sm  tracking-wide text-white">
               New Collection 2026
             </span>
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
-              Step Into <span className="text-yellow-400">Style</span> <br />
+              Step Into <span className="text-(--color-primary)">Style</span> <br />
               With Shoeify
             </h1>
 
@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#shopping"
-                className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:scale-105"
+                className="inline-flex items-center justify-center rounded-full bg-(--color-primary) px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-(--color-primary)/50 hover:scale-105"
               >
                 Shop Now
               </a>
