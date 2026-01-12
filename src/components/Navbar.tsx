@@ -36,19 +36,19 @@ const Navbar: React.FC = () => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
         className="w-full max-w-[950px] rounded-full bg-white/35 dark:bg-white/5 px-6 shadow-lg backdrop-blur-sm"
       >
-        <nav className="flex items-center justify-between py-3 text-white">
+        <nav className="flex items-center justify-between py-2 text-white">
           {/* -------- Logo -------- */}
           <a
             href="/"
             aria-label="Homepage"
-            className="flex items-center gap-2 text-xl font-mono font-semibold tracking-widest hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 text-2xl font-mono font-semibold tracking-widest hover:opacity-90 transition-opacity"
           >
-            <img className="w-10 h-10 md:w-12 md:h-12" src={logo} alt="Logo" />
-            <span>SHOEIFY</span>
+            <img className="w-11 h-11" src={logo} alt="Logo" />
+            <h3>SHOEIFY</h3>
           </a>
 
           {/* -------- Desktop Menu -------- */}
-          <div className="hidden md:flex items-center gap-x-6 text-sm">
+          <div className="hidden md:flex items-center gap-x-6 text-md">
             {navLinks.map(({ name, href }) => (
               <a
                 key={name}
