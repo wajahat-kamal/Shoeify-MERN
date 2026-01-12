@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
-* {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
+}
+
+:root {
+  --color-primary: #feb305;
 }

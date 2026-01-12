@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
                 className="relative font-mono text-md font-medium text-zinc-300 hover:text-white transition-colors group"
               >
                 {name}
-                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-yellow-400 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
