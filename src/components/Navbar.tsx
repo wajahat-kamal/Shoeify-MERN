@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
                 key={name}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className="group relative font-mono font-medium text-zinc-500 hover:text-white transition-colors duration-300"
+                className="group relative font-mono font-medium text-zinc-300 hover:text-white transition-colors duration-300"
               >
                 {name}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
