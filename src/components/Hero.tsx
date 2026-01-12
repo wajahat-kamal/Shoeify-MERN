@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section
+      id="hero"
       className="relative h-screen w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >

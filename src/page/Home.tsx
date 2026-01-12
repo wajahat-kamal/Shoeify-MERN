@@ -5,11 +5,11 @@ import About from "../components/AboutUs";
 
 function Home() {
   return (
-    <>
+    <div className="bg-[#0A080D]">
       <Navbar />
-      <Hero/>
-      <About/>
-    </>
+      <Hero />
+      <About />
+    </div>
   );
 }
 
