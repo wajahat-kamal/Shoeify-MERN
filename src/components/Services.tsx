@@ -78,11 +78,11 @@ function Services() {
           <motion.div
             variants={cardVariants}
             key={card.heading}
-            className="group bg-[#0B0F1A] border border-white/10 text-white
+            className="group bg-(--secondary) border border-white/10 text-white
             p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 c"
           >
             {/* Icon */}
-            <div className="mb-4 inline-flex items-center justify-center  w-12  h-12 rounded-xl bg-(--color-primary)/10 text-(--color-primary) group-hover:bg-(--color-primary) group-hover:text-black transition-colors duration-300">
+            <div className="mb-4 inline-flex items-center justify-center  w-12  h-12 rounded-xl bg-(--primary)/10 text-(--primary) group-hover:bg-(--primary) group-hover:text-black transition-colors duration-300">
               <card.Icon size={22} />
             </div>
 
