@@ -98,7 +98,7 @@ export const ShoesData: ShoeCard[] = [
     image: "https://themewagon.github.io/stylish/images/card-item2.jpg",
     name: "NIKE Court Vision",
     price: "$119",
-    category: "Men",
+    category: "Women",
   },
   {
     id: 14,
@@ -114,6 +114,6 @@ export const ShoesData: ShoeCard[] = [
       "https://affinity.com.pk/cdn/shop/products/image_de69f216-1119-411c-a0e4-ed6e142a425b.jpg?v=1645274467",
     name: "Adidas Ultraboost",
     price: "$129",
-    category: "Women",
+    category: "Men",
   },
 ];

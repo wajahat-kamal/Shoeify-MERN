@@ -29,7 +29,7 @@ function FeaturedProducts() {
             className="group bg-(--secondary) border border-white/10 rounded-2xl relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
           >
             {/* Image */}
-            <div className="relative w-full h-56 overflow-hidden rounded-t-2xl bg-black/40">
+            <div className="relative w-full h-50 overflow-hidden rounded-t-2xl bg-black/40">
               <img
                 src={product.image}
                 alt={product.name}
@@ -43,14 +43,16 @@ function FeaturedProducts() {
             </div>
 
             {/* Product Info */}
-            <div className="p-4 flex flex-col gap-2">
-              <h3 className="text-white font-semibold text-md line-clamp-1">
-                {product.name}
-              </h3>
+            <div className="p-3 flex flex-col gap-2">
+              <div className="flex flex-row justify-between items-center ">
+                <h3 className="text-white font-semibold text-md line-clamp-1">
+                  {product.name}
+                </h3>
 
-              <span className="text-(--primary) font-bold text-sm">
-                {product.price}
-              </span>
+                <span className="text-(--primary) font-bold text-sm">
+                  {product.price}
+                </span>
+              </div>
 
               {/* Add to Cart Button */}
               <button
