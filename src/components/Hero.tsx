@@ -24,9 +24,9 @@ const Hero = () => {
             </span>
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
-              Step Into <span className="text-(--color-primary)">Style</span>{" "}
+              Step Into Style
               <br />
-              With Shoeify
+              With <span className="text-(--color-primary)">SHOEIFY</span>{" "}
             </h1>
 
             <p className="mt-6 text-lg text-zinc-300 leading-relaxed">
