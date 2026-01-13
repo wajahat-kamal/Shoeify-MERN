@@ -57,7 +57,7 @@ function FeaturedProducts() {
               {/* Add to Cart Button */}
               <button
                 className="flex items-center justify-center gap-2 px-3 py-2 rounded-lg
-                         bg-(--primary)  hover:text-black
+                         bg-(--primary) hover:bg-(--primary)/80 hover:text-black
                          text-sm font-medium transition-colors duration-300 w-full"
               >
                 <ShoppingCart size={16} />
