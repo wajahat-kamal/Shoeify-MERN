@@ -1,88 +1,108 @@
 import React from "react";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-[#0B0F1A] text-zinc-400">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-
-        {/* Brand */}
+    <footer className="bg-secondary shadow-xl py-8 px-6 lg:px-30">
+      <div className="flex justify-between flex-col md:flex-row gap-10">
+        {/* Logo & About */}
         <div>
-          <h2 className="text-2xl font-semibold text-white mb-4">
-            Shoeify
+          <h2 className="text-3xl font-extrabold text-primary tracking-wide">
+            SHOEIFY
           </h2>
-          <p className="text-sm leading-relaxed">
+          <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">
             Shoeify delivers premium quality footwear designed for comfort,
             durability, and modern style. Step confidently, every day.
           </p>
-
-          {/* Social Icons */}
-          <div className="flex gap-4 mt-6">
-            <a className="hover:text-(--color-primary) transition-colors">
-              <Facebook size={18} />
-            </a>
-            <a className="hover:text-(--color-primary) transition-colors">
-              <Instagram size={18} />
-            </a>
-            <a className="hover:text-(--color-primary) transition-colors">
-              <Twitter size={18} />
-            </a>
-            <a className="hover:text-(--color-primary) transition-colors">
-              <Linkedin size={18} />
-            </a>
-          </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-3 text-sm">
-            <li className="hover:text-white cursor-pointer">Home</li>
-            <li className="hover:text-white cursor-pointer">Shop</li>
-            <li className="hover:text-white cursor-pointer">About Us</li>
-            <li className="hover:text-white cursor-pointer">Services</li>
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Support</h3>
-          <ul className="space-y-3 text-sm">
-            <li className="hover:text-white cursor-pointer">FAQs</li>
-            <li className="hover:text-white cursor-pointer">Shipping & Returns</li>
-            <li className="hover:text-white cursor-pointer">Privacy Policy</li>
-            <li className="hover:text-white cursor-pointer">Terms & Conditions</li>
-          </ul>
-        </div>
-
-        {/* Newsletter */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">
-            Stay Updated
+          <h3 className="text-lg font-semibold text-primary mb-2">
+            Quick Links
           </h3>
-          <p className="text-sm mb-4">
-            Subscribe to get special offers and updates.
-          </p>
-
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full px-4 py-2 rounded-l-lg bg-[#111827] border border-white/10 text-sm focus:outline-none"
-            />
-            <button
-              className="px-4 py-2 bg-(--color-primary) text-black rounded-r-lg text-sm font-medium hover:opacity-90 transition"
-            >
-              Subscribe
-            </button>
-          </div>
+          <ul className="space-y-2 text-sm text-left md:text-right">
+            <li>
+              <a
+                href="/"
+                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/blogs"
+                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+              >
+                Blogs
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10 py-4 text-center text-sm">
-        © {new Date().getFullYear()} Shoeify. All rights reserved.
+      {/* Divider Section */}
+      <div className="border-t border-gray-300 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        {/* Left Side */}
+        <p>© {new Date().getFullYear()} GLOBIFY. All rights reserved.</p>
+
+        {/* Creator Credit */}
+        <p className="mt-4 md:mt-0 text-gray-600">
+          Made with <span className="text-red-500">❤</span> by{" "}
+          <a
+            href="https://wajahat-kamal.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-gray-400 hover:text-primary transition"
+          >
+            Wajahat Kamal
+          </a>
+        </p>
+
+        {/* Social Icons */}
+        <div className="flex space-x-5 mt-4 md:mt-0">
+          <a
+            href="#"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+          >
+            <Facebook size={20} />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+          >
+            <Twitter size={20} />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+          >
+            <Instagram size={20} />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+          >
+            <Linkedin size={20} />
+          </a>
+        </div>
       </div>
     </footer>
   );
