@@ -23,15 +23,19 @@ function Products() {
   return (
     <section id="shopping" className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
       {/* Heading */}
-      <div className="max-w-7xl mx-auto text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-          Featured Products ⭐
-        </h2>
-        <p className="text-zinc-400 max-w-xl mx-auto">
-          Discover our most popular shoes crafted for comfort, performance, and
-          everyday style.
-        </p>
-      </div>
+      {pathname === "/" ? (
+        <div className="max-w-7xl mx-auto text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+            Featured Products ⭐
+          </h2>
+          <p className="text-zinc-400 max-w-xl mx-auto">
+            Discover our most popular shoes crafted for comfort, performance,
+            and everyday style.
+          </p>
+        </div>
+      ) : (
+        <div></div>
+      )}
 
       <div className="flex flex-wrap items-center justify-center md:gap-6 gap-2 max-sm:gap-1.5 mb-6">
         {categorys.map((category) => (
