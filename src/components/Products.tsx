@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { ShoesData } from "../assets/ShoesData.js";
 
 function FeaturedProducts() {
+  const limitedShoes = ShoesData.slice(0, 8);
   return (
     <section id="shopping" className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
       {/* Heading */}
@@ -18,8 +19,8 @@ function FeaturedProducts() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 px-6 md:px-0">
-        {ShoesData.map((product, index) => (
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-0">
+        {limitedShoes.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}
@@ -70,12 +71,13 @@ function FeaturedProducts() {
 
       {/* CTA */}
       <div className="text-center mt-16">
-        <button
+        <a
+          href="/shop"
           className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
           hover:opacity-90 transition"
         >
           View All Products
-        </button>
+        </a>
       </div>
     </section>
   );
