@@ -77,8 +77,6 @@ function Services() {
         {serviceCards.map((card) => (
           <motion.div
             variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
             key={card.heading}
             className="group bg-[#111827]/80 border border-white/10 text-white
             p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 c"
