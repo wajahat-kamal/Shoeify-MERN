@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./page/Home";
 import { Route, Routes } from "react-router-dom";
-import Products from "./page/Products";
 import Navbar from "./components/Navbar";
+import ProductsPage from "./page/ProductsPage";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         element={
           <>
             <Navbar />
-            <Products />
+            <ProductsPage />
           </>
         }
       />

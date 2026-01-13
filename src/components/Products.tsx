@@ -3,7 +3,7 @@ import { ShoesData } from "../assets/ShoesData.js";
 import ProductCard from "./ProductCard.js";
 import { useLocation } from "react-router-dom";
 
-function FeaturedProducts() {
+function Products() {
   const { pathname } = useLocation();
 
   const [category, setCategory] = useState("All");
@@ -73,4 +73,4 @@ function FeaturedProducts() {
   );
 }
 
-export default FeaturedProducts;
+export default Products;

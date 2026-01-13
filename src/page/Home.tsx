@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import About from "../components/AboutUs";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
-import FeaturedProducts from "../components/FeaturedProducts";
+import Products from "../components/Products";
 
 function Home() {
   return (
@@ -11,8 +11,8 @@ function Home() {
       <Hero />
       <About />
       <Services />
-      <FeaturedProducts/>
-      <Footer/>
+      <Products />
+      <Footer />
     </div>
   );
 }
