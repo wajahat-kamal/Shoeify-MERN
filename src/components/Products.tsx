@@ -27,7 +27,7 @@ function Products() {
     <section id="shopping" className="w-full bg-[#0B0F1A]">
       {/* Heading */}
       {pathname === "/" ? (
-        <div className="max-w-7xl mx-auto text-center mb-14">
+        <div className="max-w-7xl mx-auto text-center mt-6">
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
             Featured Products ⭐
           </h2>
@@ -59,7 +59,7 @@ function Products() {
         </section>
       )}
 
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 my-6">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 py-6">
         {categories.map((category) => {
           const isActive = selectedCategory === category;
 
@@ -73,7 +73,7 @@ function Products() {
           border transition-all duration-300
           ${
             isActive
-              ? "bg-(--color-primary) text-black border-(--color-primary) shadow-md"
+              ? "bg-(--primary) text-black border-(--primary) shadow-md"
               : "bg-white/5 text-zinc-300 border-white/10 hover:bg-white/10 hover:text-white"
           }
         `}
@@ -85,14 +85,14 @@ function Products() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 pb-10 md:px-15">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 pb-8 md:px-15">
         {filterdShoes.map((product) => (
           <ProductCard product={product} />
         ))}
       </div>
 
       {pathname !== "/shopping" && (
-        <div className="text-center mt-16">
+        <div className="text-center mb-16">
           <a
             href="/shopping"
             className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
