@@ -51,7 +51,7 @@ function Products() {
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl mx-auto text-sm md:text-base text-white leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm md:text-base text-black leading-relaxed">
               Discover premium footwear designed for comfort, durability, and
               modern style. Step into quality with Shoeify.
             </p>
