@@ -92,7 +92,7 @@ function Products() {
       </div>
 
       {pathname !== "/shopping" && (
-        <div className="text-center mb-16">
+        <div className="text-center pb-16">
           <a
             href="/shopping"
             className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
