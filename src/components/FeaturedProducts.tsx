@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { ShoesData } from "../assets/ShoesData.js";
 import ProductCard from "./ProductCard.js";
+import { useLocation } from "react-router-dom";
 
 function FeaturedProducts() {
-  const limitedShoes = ShoesData.slice(0, 8);
+  const { pathname } = useLocation();
 
   const [category, setCategory] = useState("All");
   const categorys = ["All", "Men", "Women"];
 
-  const filterdShoes = ShoesData.filter(
-    (shoe) => category === "All" || shoe.category === category
-  );
+  if (pathname === "/") {
+    const limitedShoes = ShoesData.slice(0, 8);
+    var filterdShoes = limitedShoes.filter(
+      (shoe) => category === "All" || shoe.category === category
+    );
+  }
 
   return (
     <section id="shopping" className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
