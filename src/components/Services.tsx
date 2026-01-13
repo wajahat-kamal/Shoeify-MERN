@@ -40,43 +40,16 @@ const serviceCards: ServiceCard[] = [
   },
 ];
 
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const cardVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
 function Services() {
   return (
     <div className="w-full py-15 px-6 md:px-20" id="services">
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
-      >
-        {serviceCards.map((card) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {serviceCards.map((card, index) => (
           <motion.div
-            variants={cardVariants}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
             key={card.heading}
             className="group bg-(--secondary) border border-white/10 text-white
             p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 c"
@@ -97,7 +70,7 @@ function Services() {
             </p>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
