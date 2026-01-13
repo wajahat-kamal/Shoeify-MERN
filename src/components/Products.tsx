@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, ShoppingCart } from "lucide-react";
 import { ShoesData } from "../assets/ShoesData.js";
 
 function FeaturedProducts() {
@@ -18,42 +18,48 @@ function FeaturedProducts() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 px-6 md:px-0">
         {ShoesData.map((product, index) => (
           <motion.div
-            key={`${product.id}`}
+            key={product.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group bg-[#111827]/80 border border-white/10 rounded-2xl p-5
-            hover:border-(--color-primary) transition-all duration-300"
+            className="group bg-(--secondary) border border-white/10 rounded-2xl relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
           >
             {/* Image */}
-            <div className="relative w-full h-52 mb-4 overflow-hidden rounded-xl bg-black/40">
+            <div className="relative w-full h-56 overflow-hidden rounded-t-2xl bg-black/40">
               <img
-                src={`${product.image}`}
-                alt={`${product.name}`}
-                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
+
+              {/* Category Badge */}
+              <span className="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-(--primary) text-black">
+                {product.category}
+              </span>
             </div>
 
-            {/* Info */}
-            <h3 className="text-white font-medium text-lg mb-1">
-              {product.name}
-            </h3>
+            {/* Product Info */}
+            <div className="p-4 flex flex-col gap-2">
+              <h3 className="text-white font-semibold text-md line-clamp-1">
+                {product.name}
+              </h3>
 
-            <div className="flex items-center justify-between">
-              <span className="text-(--color-primary) font-semibold">
+              <span className="text-(--primary) font-bold text-sm">
                 {product.price}
               </span>
 
+              {/* Add to Cart Button */}
               <button
-                className="flex items-center gap-2 text-sm px-3 py-1.5 rounded-lg
-                bg-white/5 hover:bg-(--color-primary) hover:text-black transition"
+                className="mt-2 flex items-center justify-center gap-2 px-3 py-2 rounded-lg
+                         bg-white/10  hover:text-black
+                         text-sm font-medium transition-colors duration-300 w-full"
               >
-                <ShoppingBag size={16} />
-                Buy
+                <ShoppingCart size={16} />
+                Add to Cart
               </button>
             </div>
           </motion.div>
@@ -63,7 +69,7 @@ function FeaturedProducts() {
       {/* CTA */}
       <div className="text-center mt-16">
         <button
-          className="px-8 py-3 rounded-xl bg-(--color-primary) text-black font-medium
+          className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
           hover:opacity-90 transition"
         >
           View All Products
