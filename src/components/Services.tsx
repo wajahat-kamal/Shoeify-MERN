@@ -66,7 +66,7 @@ const cardVariants: Variants = {
 
 function Services() {
   return (
-    <div className="w-full py-20 px-6 md:px-20" id="services">
+    <div className="w-full py-15 px-6 md:px-20" id="services">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -78,7 +78,7 @@ function Services() {
           <motion.div
             variants={cardVariants}
             key={card.heading}
-            className="group bg-[#111827]/80 border border-white/10 text-white
+            className="group bg-[#0A080D] border border-white/10 text-white
             p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 c"
           >
             {/* Icon */}

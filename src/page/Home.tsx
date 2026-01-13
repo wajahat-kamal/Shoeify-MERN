@@ -6,11 +6,11 @@ import Services from "../components/Services";
 
 function Home() {
   return (
-    <div className="bg-[#0A080D]">
+    <div className="bg-[#070013]">
       <Navbar />
       <Hero />
       <About />
-      <Services/>
+      <Services />
     </div>
   );
 }
