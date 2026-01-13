@@ -58,16 +58,17 @@ function FeaturedProducts() {
         ))}
       </div>
 
-      {/* CTA */}
-      <div className="text-center mt-16">
-        <a
-          href="/shopping"
-          className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
+      {pathname !== "/shopping" && (
+        <div className="text-center mt-16">
+          <a
+            href="/shopping"
+            className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
           hover:opacity-90 transition"
-        >
-          View All Products
-        </a>
-      </div>
+          >
+            View All Products
+          </a>
+        </div>
+      )}
     </section>
   );
 }
