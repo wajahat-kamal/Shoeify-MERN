@@ -48,6 +48,14 @@ function Footer() {
             </li>
             <li>
               <a
+                href="/#testimonials"
+                className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
+              >
+                Testimonials
+              </a>
+            </li>
+            <li>
+              <a
                 href="/#discount"
                 className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
