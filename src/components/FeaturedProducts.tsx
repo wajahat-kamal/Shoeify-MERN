@@ -9,12 +9,16 @@ function FeaturedProducts() {
   const [category, setCategory] = useState("All");
   const categorys = ["All", "Men", "Women"];
 
-  if (pathname === "/") {
-    const limitedShoes = ShoesData.slice(0, 8);
-    var filterdShoes = limitedShoes.filter(
-      (shoe) => category === "All" || shoe.category === category
-    );
-  }
+  const limitedShoes = ShoesData.slice(0, 8);
+
+  const filterdShoes =
+    pathname === "/"
+      ? limitedShoes.filter(
+          (shoe) => category === "All" || shoe.category === category
+        )
+      : ShoesData.filter(
+          (shoe) => category === "All" || shoe.category === category
+        );
 
   return (
     <section id="shopping" className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
@@ -57,7 +61,7 @@ function FeaturedProducts() {
       {/* CTA */}
       <div className="text-center mt-16">
         <a
-          href="/shop"
+          href="/shopping"
           className="px-8 py-3 rounded-xl bg-(--primary) text-black font-medium
           hover:opacity-90 transition"
         >
