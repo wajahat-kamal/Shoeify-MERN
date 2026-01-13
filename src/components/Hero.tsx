@@ -19,7 +19,7 @@ const Hero = () => {
           className="container mx-auto px-6"
         >
           <div className="max-w-xl">
-            <span className="inline-block mb-4 rounded-full bg-(--color-primary) px-4 py-1 text-sm  tracking-wide text-white">
+            <span className="inline-block mb-4 rounded-full bg-(--primary) px-4 py-1 text-sm  tracking-wide text-white">
               New Collection 2026
             </span>
 
@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#shopping"
-                className="inline-flex items-center justify-center rounded-full bg-(--color-primary) px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-(--color-primary)/50 hover:scale-105"
+                className="inline-flex items-center justify-center rounded-full bg-(--primary) px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-(--primary)/50 hover:scale-105"
               >
                 Shop Now
               </a>
