@@ -1,37 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
-import {ShoesData} from '../assets/ShoesData.js'
-
-interface ShoeCard {
-    id: number;
-    image: string;
-    name: string;
-    price: string;
-  }
-  
+import { ShoesData } from "../assets/ShoesData.js";
 
 function FeaturedProducts() {
-    const products: ShoeCard[] = ShoesData;
   return (
     <section className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
-      
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
           Featured Products ⭐
         </h2>
         <p className="text-zinc-400 max-w-xl mx-auto">
-          Discover our most popular shoes crafted for comfort, performance,
-          and everyday style.
+          Discover our most popular shoes crafted for comfort, performance, and
+          everyday style.
         </p>
       </div>
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {products.map((product, index) => (
+        {ShoesData.map((product, index) => (
           <motion.div
-            key={index}
+            key={`${product.id}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -42,8 +32,8 @@ function FeaturedProducts() {
             {/* Image */}
             <div className="relative w-full h-52 mb-4 overflow-hidden rounded-xl bg-black/40">
               <img
-                src={product.image}
-                alt={product.name}
+                src={`${product.image}`}
+                alt={`${product.name}`}
                 className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
               />
             </div>

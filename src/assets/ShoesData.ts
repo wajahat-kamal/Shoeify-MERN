@@ -1,4 +1,4 @@
-export const ShoesData = [
+export const ShoesData: ShoeCard[] = [
   {
     id: 1,
     image: "https://themewagon.github.io/stylish/images/card-item3.jpg",
@@ -104,3 +104,10 @@ export const ShoesData = [
     price: "$129",
   },
 ];
+
+export interface ShoeCard {
+  id: Number;
+  image: String;
+  name: String;
+  price: String;
+}
