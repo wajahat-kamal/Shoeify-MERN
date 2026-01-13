@@ -78,7 +78,7 @@ function Services() {
           <motion.div
             variants={cardVariants}
             key={card.heading}
-            className="group bg-[#0A080D] border border-white/10 text-white
+            className="group bg-[#0B0F1A] border border-white/10 text-white
             p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 c"
           >
             {/* Icon */}

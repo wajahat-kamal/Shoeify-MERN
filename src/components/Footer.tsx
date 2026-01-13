@@ -3,11 +3,11 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-secondary shadow-xl py-8 px-6 lg:px-30">
+    <footer className="bg-(--secondary) shadow-xl py-8 px-6 lg:px-30">
       <div className="flex justify-between flex-col md:flex-row gap-10">
         {/* Logo & About */}
         <div>
-          <h2 className="text-3xl font-extrabold text-primary tracking-wide">
+          <h2 className="text-3xl font-extrabold text-(--primary) tracking-wide">
             SHOEIFY
           </h2>
           <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">
@@ -18,14 +18,14 @@ function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-primary mb-2">
+          <h3 className="text-lg font-semibold text-(--primary) mb-2">
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm text-left md:text-right">
             <li>
               <a
                 href="/"
-                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+                className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
                 Home
               </a>
@@ -33,7 +33,7 @@ function Footer() {
             <li>
               <a
                 href="/blogs"
-                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+                className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
                 Blogs
               </a>
@@ -41,7 +41,7 @@ function Footer() {
             <li>
               <a
                 href="/about"
-                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+                className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
                 About
               </a>
@@ -49,7 +49,7 @@ function Footer() {
             <li>
               <a
                 href="/contact"
-                className="inline-block hover:text-primary hover:underline underline-offset-4 transition-colors"
+                className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
                 Contact
               </a>
@@ -61,7 +61,7 @@ function Footer() {
       {/* Divider Section */}
       <div className="border-t border-gray-300 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
         {/* Left Side */}
-        <p>© {new Date().getFullYear()} GLOBIFY. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} SHOEIFY. All rights reserved.</p>
 
         {/* Creator Credit */}
         <p className="mt-4 md:mt-0 text-gray-600">
@@ -70,7 +70,7 @@ function Footer() {
             href="https://wajahat-kamal.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-gray-400 hover:text-primary transition"
+            className="font-medium text-gray-400 hover:text-(--primary) transition"
           >
             Wajahat Kamal
           </a>
@@ -80,25 +80,25 @@ function Footer() {
         <div className="flex space-x-5 mt-4 md:mt-0">
           <a
             href="#"
-            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-(--primary) transition-colors"
           >
             <Facebook size={20} />
           </a>
           <a
             href="#"
-            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-(--primary) transition-colors"
           >
             <Twitter size={20} />
           </a>
           <a
             href="#"
-            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-(--primary) transition-colors"
           >
             <Instagram size={20} />
           </a>
           <a
             href="#"
-            className="p-2 rounded-full hover:bg-white/60 hover:text-primary transition-colors"
+            className="p-2 rounded-full hover:bg-white/60 hover:text-(--primary) transition-colors"
           >
             <Linkedin size={20} />
           </a>
