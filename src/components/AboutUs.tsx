@@ -49,7 +49,7 @@ const About: React.FC = () => {
             confidence.
           </p>
 
-          <button className="px-8 py-3 rounded-full font-semibold text-black transition-all hover:brightness-90 bg-(--primary)">
+          <button className="px-8 py-3 rounded-full font-semibold text-black transition-all hover:brightness-70 bg-(--primary)">
             Explore Our Collection
           </button>
         </motion.div>

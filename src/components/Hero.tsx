@@ -19,7 +19,7 @@ const Hero = () => {
           className="container mx-auto px-6"
         >
           <div className="max-w-xl">
-            <span className="inline-block mb-4 rounded-full bg-(--primary) px-4 py-1 text-sm  tracking-wide text-white">
+            <span className="inline-block mb-4 rounded-full bg-(--primary)/80 px-4 py-1 text-sm  tracking-wide text-white">
               New Collection 2026
             </span>
 

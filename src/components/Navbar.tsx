@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative w-full max-w-[950px] h-14 rounded-full bg-(--primary)/5 px-6 shadow-lg backdrop-blur-md"
+        className="relative w-full max-w-[950px] h-14 rounded-full bg-(--primary)/60 px-6 shadow-lg backdrop-blur-md"
       >
         <nav className="flex h-full items-center justify-between text-white">
           {/* Logo */}
