@@ -9,10 +9,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about-us" },
-  { name: "Shopping", href: "#shopping" },
-  { name: "Discount", href: "#discount" },
+  { name: "Home", href: "/#hero" },
+  { name: "About", href: "/#about-us" },
+  { name: "Shopping", href: "/shopping" },
+  { name: "Discount", href: "/#discount" },
 ];
 
 const Navbar: React.FC = () => {

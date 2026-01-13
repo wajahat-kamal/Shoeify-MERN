@@ -9,7 +9,7 @@ import FeaturedProducts from "../components/FeaturedProducts";
 function Home() {
   return (
     <div className="bg-[#0B0F1A]">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <About />
       <Services />
