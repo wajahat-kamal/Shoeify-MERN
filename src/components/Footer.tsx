@@ -10,7 +10,7 @@ function Footer() {
           <h2 className="text-3xl font-extrabold text-(--primary) tracking-wide">
             SHOEIFY
           </h2>
-          <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">
+          <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-sm">
             Shoeify delivers premium quality footwear designed for comfort,
             durability, and modern style. Step confidently, every day.
           </p>
@@ -21,10 +21,10 @@ function Footer() {
           <h3 className="text-lg font-semibold text-(--primary) mb-2">
             Quick Links
           </h3>
-          <ul className="space-y-2 text-sm text-left md:text-right">
+          <ul className="space-y-2 text-sm text-left md:text-right text-white/60">
             <li>
               <a
-                href="/"
+                href="/#hero"
                 className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
                 Home
@@ -32,15 +32,15 @@ function Footer() {
             </li>
             <li>
               <a
-                href="/blogs"
+                href="/Shopping"
                 className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
-                Blogs
+                Shopping
               </a>
             </li>
             <li>
               <a
-                href="/about"
+                href="/#about"
                 className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
                 About
@@ -48,10 +48,10 @@ function Footer() {
             </li>
             <li>
               <a
-                href="/contact"
+                href="/#discount"
                 className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
               >
-                Contact
+                Discount
               </a>
             </li>
           </ul>
@@ -59,18 +59,18 @@ function Footer() {
       </div>
 
       {/* Divider Section */}
-      <div className="border-t border-gray-300 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <div className="border-t border-gray-300 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/90">
         {/* Left Side */}
         <p>© {new Date().getFullYear()} SHOEIFY. All rights reserved.</p>
 
         {/* Creator Credit */}
-        <p className="mt-4 md:mt-0 text-gray-600">
+        <p className="mt-4 md:mt-0 text-white/60">
           Made with <span className="text-red-500">❤</span> by{" "}
           <a
             href="https://wajahat-kamal.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-gray-400 hover:text-(--primary) transition"
+            className="font-medium text-white/60 hover:text-(--primary) transition"
           >
             Wajahat Kamal
           </a>
