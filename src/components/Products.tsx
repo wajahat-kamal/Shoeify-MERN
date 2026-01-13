@@ -7,7 +7,7 @@ function Products() {
   const { pathname } = useLocation();
 
   const [category, setCategory] = useState("All");
-  const categorys = ["All", "Men", "Women"];
+  const categories = ["All", "Men", "Women"];
 
   const limitedShoes = ShoesData.slice(0, 8);
 
@@ -37,22 +37,29 @@ function Products() {
         <div></div>
       )}
 
-      <div className="flex flex-wrap items-center justify-center md:gap-6 gap-2 max-sm:gap-1.5 mb-6">
-        {categorys.map((category) => (
-          <button
-            key={category}
-            onClick={() => setCategory(category)}
-            className="relative
-                   px-4 py-1.5 md:px-4 md:py-1.5
-                   max-sm:px-2.5 max-sm:py-1      
-                   text-sm md:text-[15px] max-sm:text-xs  
-                   font-medium rounded-4xl overflow-hidden
-                   bg-gray-100 text-gray-600 shadow-sm
-                   transition-all duration-300"
-          >
-            {category}
-          </button>
-        ))}
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-8">
+        {categories.map((category) => {
+          const isActive = category === category;
+
+          return (
+            <button
+              key={category}
+              onClick={() => setCategory(category)}
+              className={`
+          relative px-4 py-1.5 sm:px-5 sm:py-2
+          text-xs sm:text-sm font-medium rounded-full
+          border transition-all duration-300
+          ${
+            isActive
+              ? "bg-(--color-primary) text-black border-(--color-primary) shadow-md"
+              : "bg-white/5 text-zinc-300 border-white/10 hover:bg-white/10 hover:text-white"
+          }
+        `}
+            >
+              {category}
+            </button>
+          );
+        })}
       </div>
 
       {/* Products Grid */}
