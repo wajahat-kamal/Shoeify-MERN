@@ -5,7 +5,7 @@ import { ShoesData } from "../assets/ShoesData.js";
 
 function FeaturedProducts() {
   return (
-    <section className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
+    <section id="shopping" className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
