@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative w-full max-w-[950px] h-14 rounded-full bg-(--color-primary)/5 px-6 shadow-lg backdrop-blur-md"
+        className="relative w-full max-w-[950px] h-14 rounded-full bg-(--primary)/5 px-6 shadow-lg backdrop-blur-md"
       >
         <nav className="flex h-full items-center justify-between text-white">
           {/* Logo */}
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
                 className="relative font-mono text-md font-medium text-zinc-300 hover:text-white transition-colors group"
               >
                 {name}
-                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 h-0.5 w-0 text-white bg-white transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
