@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "../components/Hero";
 import About from "../components/AboutUs";
 import Services from "../components/Services";
-import Footer from "../components/Footer";
 import Products from "../components/Products";
 
 function Home() {
@@ -12,7 +11,6 @@ function Home() {
       <About />
       <Services />
       <Products />
-      <Footer />
     </div>
   );
 }
