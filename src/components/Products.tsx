@@ -43,6 +43,7 @@ function Products() {
             backgroundImage: `url(${bgImage})`,
           }}
         >
+          <div className="absolute inset-0 backdrop-blur-xs" />
           <div className="absolute right-85 top-35 max-w-7xl mx-auto text-center">
             {/* Heading */}
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-(--primary) mb-4">
@@ -50,7 +51,7 @@ function Products() {
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl mx-auto text-sm md:text-base text-black leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm md:text-base text-white leading-relaxed">
               Discover premium footwear designed for comfort, durability, and
               modern style. Step into quality with Shoeify.
             </p>
@@ -58,7 +59,7 @@ function Products() {
         </section>
       )}
 
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-8">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 my-6">
         {categories.map((category) => {
           const isActive = selectedCategory === category;
 
@@ -84,7 +85,7 @@ function Products() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-15">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 pb-10 md:px-15">
         {filterdShoes.map((product) => (
           <ProductCard product={product} />
         ))}
