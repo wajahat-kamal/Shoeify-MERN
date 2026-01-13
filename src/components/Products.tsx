@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ShoesData } from "../assets/ShoesData.js";
 import ProductCard from "./ProductCard.js";
 import { useLocation } from "react-router-dom";
+import bgImage from "../assets/shopping-page-bg-image.jpg";
 
 function Products() {
   const { pathname } = useLocation();
@@ -36,7 +37,33 @@ function Products() {
           </p>
         </div>
       ) : (
-        <div></div>
+        <section
+          className="relative w-full py-24 px-6 md:px-20 bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+          }}
+        >
+          <div className="relative max-w-7xl mx-auto text-center">
+            {/* Label */}
+            <span
+              className="inline-block mb-4 px-4 py-1.5 rounded-full text-sm font-medium
+                       bg-(--color-primary)/10 text-(--color-primary)"
+            >
+              Shoeify Store
+            </span>
+
+            {/* Heading */}
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+              Shop the Perfect Pair
+            </h1>
+
+            {/* Description */}
+            <p className="max-w-2xl mx-auto text-sm md:text-base text-zinc-300 leading-relaxed">
+              Discover premium footwear designed for comfort, durability, and
+              modern style. Step into quality with Shoeify.
+            </p>
+          </div>
+        </section>
       )}
 
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-8">
