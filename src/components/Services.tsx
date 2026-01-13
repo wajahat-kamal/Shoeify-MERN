@@ -5,7 +5,7 @@ import {
   Wallet,
   type LucideIcon,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 interface ServiceCard {
   heading: string;
@@ -40,7 +40,7 @@ const serviceCards: ServiceCard[] = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -49,7 +49,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 30,
