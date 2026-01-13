@@ -24,7 +24,7 @@ function Products() {
         );
 
   return (
-    <section id="shopping" className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
+    <section id="shopping" className="w-full bg-[#0B0F1A]">
       {/* Heading */}
       {pathname === "/" ? (
         <div className="max-w-7xl mx-auto text-center mb-14">
@@ -38,27 +38,19 @@ function Products() {
         </div>
       ) : (
         <section
-          className="relative w-full py-24 px-6 md:px-20 bg-center bg-cover"
+          className="relative w-full h-90 py-24 px-6 md:px-20 bg-center bg-cover"
           style={{
             backgroundImage: `url(${bgImage})`,
           }}
         >
-          <div className="relative max-w-7xl mx-auto text-center">
-            {/* Label */}
-            <span
-              className="inline-block mb-4 px-4 py-1.5 rounded-full text-sm font-medium
-                       bg-(--color-primary)/10 text-(--color-primary)"
-            >
-              Shoeify Store
-            </span>
-
+          <div className="absolute right-85 top-35 max-w-7xl mx-auto text-center">
             {/* Heading */}
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-(--primary) mb-4">
               Shop the Perfect Pair
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl mx-auto text-sm md:text-base text-zinc-300 leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm md:text-base text-black leading-relaxed">
               Discover premium footwear designed for comfort, durability, and
               modern style. Step into quality with Shoeify.
             </p>
@@ -92,7 +84,7 @@ function Products() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-0">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-15">
         {filterdShoes.map((product) => (
           <ProductCard product={product} />
         ))}
