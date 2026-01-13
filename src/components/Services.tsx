@@ -2,7 +2,7 @@ import { BadgeCheck, Headset, Truck, Wallet } from "lucide-react";
 
 function Services() {
   return (
-    <div className="w-full pt-25  p-6 md:px-20" id="services">
+    <div className="w-full p-6 md:px-20" id="services">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Card 1 */}
         <div className="bg-[#1E2939] text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
-    <section id="about-us" className="w-full py-24">
+    <section id="about-us" className="w-full pt-20">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         {/* Left Image */}
         <motion.div
@@ -17,7 +17,7 @@ const About: React.FC = () => {
           <img
             src={aboutImage}
             alt="Shoeify premium shoes"
-            className="w-full h-110 rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500"
+            className="w-full h-110 rounded-2xl shadow-2xl object-cover"
           />
         </motion.div>
 
