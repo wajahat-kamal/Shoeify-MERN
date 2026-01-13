@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 function Products() {
   const { pathname } = useLocation();
 
-  const [category, setCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "Men", "Women"];
 
   const limitedShoes = ShoesData.slice(0, 8);
@@ -14,10 +14,12 @@ function Products() {
   const filterdShoes =
     pathname === "/"
       ? limitedShoes.filter(
-          (shoe) => category === "All" || shoe.category === category
+          (shoe) =>
+            selectedCategory === "All" || shoe.category === selectedCategory
         )
       : ShoesData.filter(
-          (shoe) => category === "All" || shoe.category === category
+          (shoe) =>
+            selectedCategory === "All" || shoe.category === selectedCategory
         );
 
   return (
@@ -39,12 +41,12 @@ function Products() {
 
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-8">
         {categories.map((category) => {
-          const isActive = category === category;
+          const isActive = selectedCategory === category;
 
           return (
             <button
               key={category}
-              onClick={() => setCategory(category)}
+              onClick={() => setSelectedCategory(category)}
               className={`
           relative px-4 py-1.5 sm:px-5 sm:py-2
           text-xs sm:text-sm font-medium rounded-full
