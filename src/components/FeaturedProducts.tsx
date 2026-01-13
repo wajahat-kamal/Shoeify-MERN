@@ -20,7 +20,7 @@ function FeaturedProducts() {
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-0">
         {limitedShoes.map((product) => (
-         <ProductCard product={product}/>
+          <ProductCard product={product} />
         ))}
       </div>
 
