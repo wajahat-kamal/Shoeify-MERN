@@ -3,7 +3,16 @@ import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
 import {ShoesData} from '../assets/ShoesData.js'
 
+interface ShoeCard {
+    id: number;
+    image: string;
+    name: string;
+    price: string;
+  }
+  
+
 function FeaturedProducts() {
+    const products: ShoeCard[] = ShoesData;
   return (
     <section className="w-full py-24 px-6 md:px-20 bg-[#0B0F1A]">
       
@@ -20,9 +29,9 @@ function FeaturedProducts() {
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {ShoesData.map((product, index) => (
+        {products.map((product, index) => (
           <motion.div
-            key={product.id}
+            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
