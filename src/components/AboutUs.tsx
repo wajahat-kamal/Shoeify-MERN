@@ -29,16 +29,13 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="flex-1 text-white"
         >
-          <h2
-            className="text-4xl md:text-5xl font-extrabold mb-6"
-            style={{ color: "var(--color-primary)" }}
-          >
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-(--primary)">
             About Shoeify
           </h2>
 
           <p className="text-zinc-300 mb-4 text-lg leading-relaxed">
-            At <span style={{ color: "var(--color-primary)" }}>Shoeify</span>,
-            we believe every step should feel effortless and stylish. Our
+            At <span style={{ color: "var(--primary)" }}>Shoeify</span>, we
+            believe every step should feel effortless and stylish. Our
             collection blends cutting-edge design with superior comfort,
             ensuring that you look good and feel great, whether you’re hitting
             the streets, the gym, or just relaxing.
@@ -52,10 +49,7 @@ const About: React.FC = () => {
             confidence.
           </p>
 
-          <button
-            className="px-8 py-3 rounded-full font-semibold text-black transition-all hover:brightness-90"
-            style={{ backgroundColor: "var(--color-primary)" }}
-          >
+          <button className="px-8 py-3 rounded-full font-semibold text-black transition-all hover:brightness-90 bg-(--primary)">
             Explore Our Collection
           </button>
         </motion.div>
