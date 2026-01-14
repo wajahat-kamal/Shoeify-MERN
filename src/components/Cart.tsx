@@ -1,13 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "../redux/store";
-import { removeFromCart, closeCart } from "../redux/cart/cartSlice";
+import {
+  removeFromCart,
+  closeCart,
+  type CartItem,
+  plusQty,
+} from "../redux/cart/cartSlice";
+import { Minus, Plus } from "lucide-react";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { items, isOpen } = useSelector((state: RootState) => state.cart);
 
   if (!isOpen) return null;
-
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm">
       {/* Overlay click close */}
@@ -46,7 +51,7 @@ const Cart = () => {
                 bg-white/5 border border-white/10
                 rounded-xl p-3"
             >
-              <div className="w-10 h-15 flex justify-center items-center">
+              <div className="w-10 h-10 flex justify-center items-center">
                 <img
                   src={item.image}
                   className="w-full h-10 object-cover rounded-sm"
@@ -56,9 +61,15 @@ const Cart = () => {
               <div className="flex-1 ml-2">
                 <p className="text-sm text-white leading-tight">{item.name}</p>
                 <span className="text-zinc-400 flex flex-row justify-start items-center gap-5">
-                  <h4 className="text-sm ">{item.price}</h4>
+                  <h4 className="text-sm ">${item.price}</h4>
                   <div>
+                    <button onClick={() => dispatch(plusQty(item))}>
+                      <Plus />
+                    </button>
                     <p className="text-xs">Qty: {item.quantity}</p>
+                    <button>
+                      <Minus />
+                    </button>
                   </div>
                 </span>
               </div>

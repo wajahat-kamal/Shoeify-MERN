@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
           </h3>
 
           <span className="text-(--primary) font-bold text-sm">
-            {product.price}
+            ${product.price}
           </span>
         </div>
 

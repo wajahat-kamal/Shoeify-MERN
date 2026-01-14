@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { ShoeCard } from "../../assets/data/ShoesData";
 
-interface CartItem extends ShoeCard {
+export interface CartItem extends ShoeCard {
   quantity: number;
 }
 
@@ -36,10 +36,19 @@ const cartSlice = createSlice({
     closeCart(state) {
       state.isOpen = false;
     },
+    plusQty(state, action: PayloadAction<ShoeCard>) {
+      const item = state.items.find((item) => item.id === action.payload.id);
+      if (item) {
+        item.quantity += 1;
+        item.price = item.price * 2;
+      } else {
+        console.log("error in plusQty");
+      }
+    },
   },
 });
 
-export const { addToCart, removeFromCart, toggleCart, closeCart } =
+export const { addToCart, removeFromCart, toggleCart, closeCart, plusQty } =
   cartSlice.actions;
 
 export default cartSlice.reducer;
