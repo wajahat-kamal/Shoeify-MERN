@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductsPage from "./page/ProductsPage";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <>
             <Navbar />
             <Home />
+            <Cart/>
             <Footer />
           </>
         }
