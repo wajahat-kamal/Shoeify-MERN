@@ -25,8 +25,12 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   const dispatch = useDispatch();
-  const totalItems = useSelector((state: RootState) =>
-    state.cart.items.reduce((total, item) => total + item.quantity, 0)
+  const totalItems = useSelector(
+    (state: { cart: { items: Array<{ quantity: number }> } }) =>
+      state.cart.items.reduce(
+        (total: number, item: { quantity: number }) => total + item.quantity,
+        0
+      )
   );
 
   useEffect(() => {
