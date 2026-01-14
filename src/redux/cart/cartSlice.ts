@@ -36,8 +36,8 @@ const cartSlice = createSlice({
     closeCart(state) {
       state.isOpen = false;
     },
-    plusQty(state, action: PayloadAction<ShoeCard>) {
-      const item = state.items.find((item) => item.id === action.payload.id);
+    plusQty(state, action: PayloadAction<number>) {
+      const item = state.items.find((item) => item.id === action.payload);
       if (!item) return;
       if (item?.quantity >= 1) {
         item.quantity += 1;
@@ -45,8 +45,8 @@ const cartSlice = createSlice({
         console.log("error in plusQty redux");
       }
     },
-    minusQty(state, action: PayloadAction<ShoeCard>) {
-      const item = state.items.find((item) => item.id === action.payload.id);
+    minusQty(state, action: PayloadAction<number>) {
+      const item = state.items.find((item) => item.id === action.payload);
       if (!item) return;
       if (item.quantity > 1) {
         item.quantity -= 1;
