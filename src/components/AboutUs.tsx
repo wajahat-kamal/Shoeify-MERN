@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../assets/about-image.jpg";
+import aboutImage from "../assets/images/about-image.jpg";
 import { motion } from "framer-motion";
 
 const About: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../assets/bg-image.png";
+import bgImage from "../assets/images/bg-image.png";
 import { motion } from "framer-motion";
 
 const Hero = () => {
