@@ -11,8 +11,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <motion.div
@@ -50,12 +49,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
 
         {/* Add to Cart Button */}
         <button
-        onClick={() => dispatch(addToCart(product))}
-          className="flex items-center justify-center gap-2 px-3 py-2 rounded-lg
-                 bg-(--primary) hover:bg-(--primary)/80 hover:text-black
-                 text-sm font-medium transition-colors duration-300 w-full"
+          onClick={() => dispatch(addToCart(product))}
+          className="
+    flex items-center justify-center gap-2 px-4 py-2
+    rounded-xl bg-(--primary)/80 text-white font-medium text-sm
+    w-full transition-all duration-300
+    hover:bg-(--primary)/80 hover:scale-102
+    active:scale-95
+    shadow-md hover:shadow-lg
+    cursor-pointer
+  "
         >
-          <ShoppingCart size={16} />
+          <ShoppingCart size={16} className="text-white" />
           Add to Cart
         </button>
       </div>
