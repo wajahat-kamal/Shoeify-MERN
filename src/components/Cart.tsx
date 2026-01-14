@@ -46,10 +46,20 @@ const Cart = () => {
                 bg-white/5 border border-white/10
                 rounded-xl p-3"
             >
-              <div className="flex-1">
+              <div className="w-10 h-15 flex justify-center items-center">
+                <img
+                  src={item.image}
+                  className="w-full h-10 object-cover rounded-sm"
+                  alt=""
+                />
+              </div>
+              <div className="flex-1 ml-2">
                 <p className="text-sm text-white leading-tight">{item.name}</p>
-                <span className="text-xs text-zinc-400">
-                  Qty: {item.quantity}
+                <span className="text-zinc-400 flex flex-row justify-start items-center gap-5">
+                  <h4 className="text-sm ">{item.price}</h4>
+                  <div>
+                    <p className="text-xs">Qty: {item.quantity}</p>
+                  </div>
                 </span>
               </div>
 
