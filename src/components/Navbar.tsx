@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingCart, X } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "../assets/images/logo.png";
+import cartImage from "../assets/images/cart-image.png";
 
 interface NavLink {
   name: string;
@@ -35,7 +36,7 @@ const Navbar: React.FC = () => {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative w-full max-w-[950px] h-14 rounded-full bg-(--primary)/60 px-6 shadow-lg backdrop-blur-md"
+        className="relative w-full max-w-[950px] h-14 rounded-full bg-(--primary)/70 px-6 shadow-lg backdrop-blur-md"
       >
         <nav className="flex h-full items-center justify-between text-white">
           {/* Logo */}
@@ -49,19 +50,26 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4">
             {navLinks.map(({ name, href }) => (
               <a
                 key={name}
                 href={href}
-                className="relative font-mono text-md font-medium text-zinc-200 hover:text-white transition-colors group"
+                className="relative font-mono text-md font-medium text-zinc-600 hover:text-white transition-colors group"
               >
                 {name}
                 <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-          </div
-          >
+            <div className="flex items-center pl-4 h-11 w-14 border-l border-zinc-500/60">
+              <img
+                src={cartImage}
+                alt="Cart item preview"
+                className="h-8 w-8 object-contain opacity-90"
+                loading="lazy"
+              />
+            </div>
+          </div>
 
           {/* Mobile Toggle */}
           <button
