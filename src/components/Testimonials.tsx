@@ -39,7 +39,7 @@ const Testimonials = () => {
             key={`${item.id}-${index}`}
             className="min-w-[280px] md:min-w-[320px]
               bg-[#111827]/80 border border-white/10
-              rounded-2xl p-6 transition-all duration-300"
+              rounded-2xl hover:border-(--primary) p-6 transition-all duration-300"
           >
             {/* Rating */}
             <div className="flex gap-1 mb-4">
