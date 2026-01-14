@@ -41,7 +41,6 @@ const cartSlice = createSlice({
       if (!item) return;
       if (item?.quantity >= 1) {
         item.quantity += 1;
-        item.price = item.price * 2;
       } else {
         console.log("error in plusQty redux");
       }

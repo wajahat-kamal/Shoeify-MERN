@@ -62,7 +62,7 @@ const Cart = () => {
               <div className="flex-1 ml-2">
                 <p className="text-sm text-white leading-tight">{item.name}</p>
                 <span className="text-zinc-400 flex flex-row justify-start items-center gap-5">
-                  <h4 className="text-sm ">${item.price}</h4>
+                  <h4 className="text-sm ">${item.quantity * item.price}</h4>
                   <div>
                     <button onClick={() => dispatch(plusQty(item))}>
                       <Plus />
