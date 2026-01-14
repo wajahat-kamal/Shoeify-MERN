@@ -50,7 +50,7 @@ const Cart = () => {
               key={item.id}
               className="flex items-center justify-between
             bg-white/5 border border-white/10
-            rounded-xl p-3 hover:bg-white/10 transition-colors"
+            rounded-lg p-2 hover:bg-white/10 transition-colors"
             >
               {/* Product Image */}
               <div className="w-12 h-12 flex-shrink-0 rounded-md overflow-hidden border border-white/10">
@@ -62,14 +62,14 @@ const Cart = () => {
               </div>
 
               {/* Product Info */}
-              <div className="flex-1 ml-4">
-                <p className="text-sm text-white leading-snug">
+              <div className="flex-1 ml-2">
+                <p className="text-xs text-white leading-snug">
                   {item.name}
                 </p>
 
-                <div className="flex items-center justify-between text-xs text-zinc-400">
+                <div className="flex items-center justify-start gap-8 mt-1 text-xs text-zinc-400">
                   {/* Price */}
-                  <span className="text-white font-semibold">
+                  <span className="text-white font-semibold text-sm">
                     ${item.price * item.quantity}
                   </span>
 
