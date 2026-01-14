@@ -5,14 +5,15 @@ import type { ShoeCard } from "../assets/data/ShoesData";
 
 interface ProductCardProps {
   product: ShoeCard;
+  index: number;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: product.id * 0.1 }}
+      transition={{ duration: 0.5, delay: (index + 0.5) * 0.1 }}
       viewport={{ once: true }}
       className="group bg-(--secondary) border border-white/10 rounded-2xl relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
     >

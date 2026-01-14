@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ShoesData } from "../assets/data/ShoesData.js";
+import { ShoesData } from "../assets/data/ShoesData";
 import ProductCard from "./ProductCard";
 import { useLocation } from "react-router-dom";
 import bgImage from "../assets/images/shopping-page-bg-image.jpg";
@@ -86,8 +86,8 @@ function Products() {
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 pb-8 md:px-15">
-        {filterdShoes.map((product) => (
-          <ProductCard product={product} key={product.id} />
+        {filterdShoes.map((product, index) => (
+          <ProductCard product={product} index={index} key={product.id} />
         ))}
       </div>
 
