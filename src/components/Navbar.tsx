@@ -3,6 +3,8 @@ import { Menu, ShoppingCart, X } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "../assets/images/logo.png";
 import cartImage from "../assets/images/cart-image.png";
+import { useDispatch } from "react-redux";
+import { toggleCart } from "../redux/cart/cartSlice";
 
 interface NavLink {
   name: string;
@@ -14,13 +16,14 @@ const navLinks: NavLink[] = [
   { name: "Shopping", href: "/shopping" },
   { name: "About", href: "/#about-us" },
   { name: "Testimonials", href: "/#testimonials" },
-  { name: "Discount", href: "/#discount" },
 ];
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -63,6 +66,7 @@ const Navbar: React.FC = () => {
             ))}
             <div className="flex items-center pl-4 h-11 w-14 border-l border-zinc-500/60">
               <img
+                onClick={() => dispatch(toggleCart())}
                 src={cartImage}
                 alt="Cart item preview"
                 className="h-8 w-8 object-contain opacity-90 cursor-pointer"

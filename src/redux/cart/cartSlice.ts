@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { ShoeCard } from "../../assets/data/ShoesData";
 
 interface CartItem extends ShoeCard {
@@ -19,18 +19,19 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart(state, action) {},
-    removeFromCart(state, action) {},
+    addToCart(state, action: PayloadAction<ShoeCard>) {},
+    removeFromCart(state, action: PayloadAction<ShoeCard>) {},
 
     toggleCart(state) {
       state.isOpen = !state.isOpen;
     },
-    CloseCart(state) {
+    closeCart(state) {
       state.isOpen = false;
     },
   },
 });
 
-export const { addToCart, removeFromCart, toggleCart, CloseCart } =
+export const { addToCart, removeFromCart, toggleCart, closeCart } =
   cartSlice.actions;
+
 export default cartSlice.reducer;
