@@ -38,7 +38,8 @@ const cartSlice = createSlice({
     },
     plusQty(state, action: PayloadAction<ShoeCard>) {
       const item = state.items.find((item) => item.id === action.payload.id);
-      if (item) {
+      if (!item) return;
+      if (item?.quantity >= 1) {
         item.quantity += 1;
         item.price = item.price * 2;
       } else {
@@ -47,18 +48,23 @@ const cartSlice = createSlice({
     },
     minusQty(state, action: PayloadAction<ShoeCard>) {
       const item = state.items.find((item) => item.id === action.payload.id);
-      if (item) {
+      if (!item) return;
+      if (item.quantity > 1) {
         item.quantity -= 1;
-        const itemPrice = item.price;
-        item.price = item.price - itemPrice;
       } else {
-        console.log("error in minusQty redux");
+        state.items = state.items.filter((i) => i.id !== item.id);
       }
     },
   },
 });
 
-export const { addToCart, removeFromCart, toggleCart, closeCart, plusQty, minusQty } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  toggleCart,
+  closeCart,
+  plusQty,
+  minusQty,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
