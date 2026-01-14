@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       className="group bg-(--secondary) border border-white/10 rounded-2xl relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
     >
       {/* Image */}
-      <div className="relative w-full h-50 overflow-hidden rounded-t-2xl bg-black/40">
+      <div className="relative w-full h-50 overflow-hidden rounded-t-2xl">
         <img
           src={product.image}
           alt={product.name}
