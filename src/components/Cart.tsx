@@ -5,6 +5,7 @@ import {
   closeCart,
   type CartItem,
   plusQty,
+  minusQty,
 } from "../redux/cart/cartSlice";
 import { Minus, Plus } from "lucide-react";
 
@@ -67,7 +68,7 @@ const Cart = () => {
                       <Plus />
                     </button>
                     <p className="text-xs">Qty: {item.quantity}</p>
-                    <button>
+                    <button onClick={() => dispatch(minusQty(item))}>
                       <Minus />
                     </button>
                   </div>
