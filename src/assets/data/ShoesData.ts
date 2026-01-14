@@ -81,8 +81,9 @@ export const ShoesData: ShoeCard[] = [
   },
   {
     id: 11,
-    image: "https://themewagon.github.io/stylish/images/card-item1.jpg",
-    name: "PUMA RS-X",
+    image:
+      "https://housershoes.com/cdn/shop/files/tommys.jpg?crop=region&crop_height=4000&crop_left=0&crop_top=1000&crop_width=4000&v=1741787900&width=4000",
+    name: "Addidas Footwear Classic",
     price: "$89",
     category: "Men",
   },
@@ -115,5 +116,12 @@ export const ShoesData: ShoeCard[] = [
     name: "Adidas Ultraboost",
     price: "$129",
     category: "Men",
+  },
+  {
+    id: 16,
+    image: "https://themewagon.github.io/stylish/images/card-item1.jpg",
+    name: "PUMA RS-X",
+    price: "$119",
+    category: "Women",
   },
 ];
