@@ -39,9 +39,9 @@ const Cart = () => {
 
       {/* Drawer */}
       <motion.div
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.2, ease: "easeIn" }}
+        transition={{ duration: 0.3, ease: "easeIn" }}
         className="absolute right-0 top-0 h-full w-80
           bg-(--secondary) border-l border-white/10
           p-6 shadow-2xl"
