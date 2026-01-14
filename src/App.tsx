@@ -33,6 +33,7 @@ function App() {
             <>
               <Navbar />
               <ProductsPage />
+              <Cart />
               <Footer />
             </>
           }
