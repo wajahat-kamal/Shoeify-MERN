@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Menu, ShoppingCart, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "../assets/images/logo.png";
 import cartImage from "../assets/images/cart-image.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../redux/cart/cartSlice";
+import type { RootState } from "@reduxjs/toolkit/query";
 
 interface NavLink {
   name: string;
@@ -24,6 +25,9 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   const dispatch = useDispatch();
+  const totalItems = useSelector((state: RootState) =>
+    state.cart.items.reduce((total, item) => total + item.quantity, 0)
+  );
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -67,15 +71,33 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            <div className="flex items-center pl-4 h-11 w-14 md:border-l border-zinc-500/60">
+            <button
+              type="button"
+              onClick={() => dispatch(toggleCart())}
+              aria-label="Open cart"
+              className="relative flex items-center justify-center pl-4 h-11 w-14
+    md:border-l border-zinc-500/60
+    transition-colors duration-200
+    hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-(--primary)/40"
+            >
               <img
-                onClick={() => dispatch(toggleCart())}
                 src={cartImage}
-                alt="Cart item preview"
-                className="h-8 w-8 object-contain opacity-90 cursor-pointer"
+                alt="Cart"
+                className="h-8 w-8 object-contain opacity-90 pointer-events-none"
                 loading="lazy"
               />
-            </div>
+
+              {totalItems > 0 && (
+                <span
+                  className="absolute -top-2 -right-2
+        min-w-[20px] h-5 px-1
+        bg-red-500 text-xs font-medium text-white
+        flex items-center justify-center rounded-full"
+                >
+                  {totalItems}
+                </span>
+              )}
+            </button>
           </div>
 
           {/* Mobile Toggle */}

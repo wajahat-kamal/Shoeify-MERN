@@ -15,7 +15,7 @@ const Cart = () => {
 
         {items.length === 0 && <p className="text-zinc-400">Cart is empty</p>}
 
-        {items.map((item: any) => (
+        {items.map((item) => (
           <div key={item.id} className="flex justify-between items-center mb-4">
             <div>
               <p>{item.name}</p>
