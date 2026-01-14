@@ -52,19 +52,22 @@ const Navbar: React.FC = () => {
             <span>SHOEIFY</span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-4">
-            {navLinks.map(({ name, href }) => (
-              <a
-                key={name}
-                href={href}
-                className="relative font-mono text-md font-medium text-zinc-600 hover:text-white transition-colors group"
-              >
-                {name}
-                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
-            <div className="flex items-center pl-4 h-11 w-14 border-l border-zinc-500/60">
+          <div className="flex flex-row gap-4">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-4">
+              {navLinks.map(({ name, href }) => (
+                <a
+                  key={name}
+                  href={href}
+                  className="relative font-mono text-md font-medium text-zinc-600 hover:text-white transition-colors group"
+                >
+                  {name}
+                  <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                </a>
+              ))}
+            </div>
+
+            <div className="flex items-center pl-4 h-11 w-14 md:border-l border-zinc-500/60">
               <img
                 onClick={() => dispatch(toggleCart())}
                 src={cartImage}
