@@ -8,6 +8,7 @@ import {
   minusQty,
 } from "../redux/cart/cartSlice";
 import { Minus, Plus } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,10 @@ const Cart = () => {
       <div className="absolute inset-0" onClick={() => dispatch(closeCart())} />
 
       {/* Drawer */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.2, ease: "easeIn" }}
         className="absolute right-0 top-0 h-full w-80
           bg-(--secondary) border-l border-white/10
           p-6 shadow-2xl"
@@ -63,9 +67,7 @@ const Cart = () => {
 
               {/* Product Info */}
               <div className="flex-1 ml-2">
-                <p className="text-xs text-white leading-snug">
-                  {item.name}
-                </p>
+                <p className="text-xs text-white leading-snug">{item.name}</p>
 
                 <div className="flex items-center justify-start gap-8 mt-1 text-xs text-zinc-400">
                   {/* Price */}
@@ -123,7 +125,7 @@ const Cart = () => {
             </button>
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };
