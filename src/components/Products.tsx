@@ -27,11 +27,11 @@ function Products() {
     <section id="shopping" className="w-full bg-[#0B0F1A]">
       {/* Heading */}
       {pathname === "/" ? (
-        <div className="max-w-7xl mx-auto text-center mt-6">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+        <div className="max-w-7xl md:w-full w-80 mx-auto text-center mt-6">
+          <h2 className="text-2xl md:text-4xl font-semibold text-white mb-4">
             Featured Products ⭐
           </h2>
-          <p className="text-zinc-400 max-w-xl mx-auto">
+          <p className="text-zinc-400 max-w-xl mx-auto text-sm md:text-lg">
             Discover our most popular shoes crafted for comfort, performance,
             and everyday style.
           </p>
