@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               <img
                 src={cartImage}
                 alt="Cart item preview"
-                className="h-8 w-8 object-contain opacity-90"
+                className="h-8 w-8 object-contain opacity-90 cursor-pointer"
                 loading="lazy"
               />
             </div>
