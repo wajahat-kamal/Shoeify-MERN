@@ -6,15 +6,32 @@ import {
   type CartItem,
   plusQty,
   minusQty,
+  checkout,
 } from "../redux/cart/cartSlice";
 import { Minus, Plus } from "lucide-react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { items, isOpen } = useSelector((state: RootState) => state.cart);
 
   if (!isOpen) return null;
+
+  const checkoutHandler = () => {
+    dispatch(checkout());
+
+    toast.success("🎉 Checkout completed successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "dark",
+    });
+  };
+
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm">
       {/* Overlay click close */}
@@ -111,6 +128,7 @@ const Cart = () => {
         {items.length > 0 && (
           <div className="absolute bottom-6 left-6 right-6 space-y-3">
             <button
+              onClick={checkoutHandler}
               className="w-full bg-(--primary) text-white py-2 rounded-xl
                 hover:opacity-90 transition"
             >

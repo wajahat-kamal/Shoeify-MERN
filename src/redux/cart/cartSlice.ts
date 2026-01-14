@@ -54,6 +54,10 @@ const cartSlice = createSlice({
         state.items = state.items.filter((i) => i.id !== item.id);
       }
     },
+    checkout(state) {
+      state.items = [];
+      state.isOpen = false;
+    },
   },
 });
 
@@ -64,6 +68,7 @@ export const {
   closeCart,
   plusQty,
   minusQty,
+  checkout,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

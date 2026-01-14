@@ -1,36 +1,44 @@
 import React from "react";
-import Home from "./page/Home";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import Home from "./page/Home";
 import ProductsPage from "./page/ProductsPage";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Navbar />
-            <Home />
-            <Cart/>
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/shopping"
-        element={
-          <>
-            <Navbar />
-            <ProductsPage />
-            <Footer />
-          </>
-        }
-      />
-    </Routes>
+    <>
+      {/* ToastContainer should be rendered once in your app */}
+      <ToastContainer />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+              <Cart />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/shopping"
+          element={
+            <>
+              <Navbar />
+              <ProductsPage />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </>
   );
 }
 
