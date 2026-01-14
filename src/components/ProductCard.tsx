@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import type { ShoeCard } from "../assets/data/ShoesData";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cart/cartSlice";
 
 interface ProductCardProps {
   product: ShoeCard;
@@ -9,6 +11,9 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
+
+  const dispatch = useDispatch()
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -45,6 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
 
         {/* Add to Cart Button */}
         <button
+        onClick={() => dispatch(addToCart(product))}
           className="flex items-center justify-center gap-2 px-3 py-2 rounded-lg
                  bg-(--primary) hover:bg-(--primary)/80 hover:text-black
                  text-sm font-medium transition-colors duration-300 w-full"
