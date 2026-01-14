@@ -8,35 +8,35 @@ export interface ShoeCard {
 
 export const ShoesData: ShoeCard[] = [
   {
-    id: 1,
+    id: 100001,
     image: "https://themewagon.github.io/stylish/images/card-item3.jpg",
     name: "NIKE Air Max",
     price: "$109",
     category: "Men",
   },
   {
-    id: 2,
+    id: 100002,
     image: "https://themewagon.github.io/stylish/images/card-item8.jpg",
     name: "New Balance Fresh Foam",
     price: "$149",
     category: "Women",
   },
   {
-    id: 3,
+    id: 100003,
     image: "https://themewagon.github.io/stylish/images/card-item7.jpg",
     name: "NIKE Revolution",
     price: "$79",
     category: "Men",
   },
   {
-    id: 4,
+    id: 100004,
     image: "https://themewagon.github.io/stylish/images/card-item4.jpg",
     name: "NIKE Air Zoom",
     price: "$99",
     category: "Women",
   },
   {
-    id: 5,
+    id: 100005,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh50TAPkXI7K6tQ1JnPLfp1QpIAqDnMMTg7Q&s",
     name: "Skechers Go Run",
@@ -44,35 +44,35 @@ export const ShoesData: ShoeCard[] = [
     category: "Men",
   },
   {
-    id: 6,
+    id: 100006,
     image: "https://themewagon.github.io/stylish/images/card-image1.jpg",
     name: "NIKE Pegasus",
     price: "$119",
     category: "Men",
   },
   {
-    id: 7,
+    id: 100007,
     image: "https://themewagon.github.io/stylish/images/card-image3.jpg",
     name: "Allen Edmonds Park Ave",
     price: "$89",
     category: "Women",
   },
   {
-    id: 8,
+    id: 100008,
     image: "https://themewagon.github.io/stylish/images/card-item6.jpg",
     name: "Church’s Shannon",
     price: "$139",
     category: "Women",
   },
   {
-    id: 9,
+    id: 100009,
     image: "https://themewagon.github.io/stylish/images/card-item10.jpg",
     name: "NIKE Air Force",
     price: "$99",
     category: "Men",
   },
   {
-    id: 10,
+    id: 100010,
     image:
       "https://paragonfootwear.com/cdn/shop/products/k1016l_pch_1.jpg?v=1741862818",
     name: "Paragon Footwear Classic",
@@ -80,7 +80,7 @@ export const ShoesData: ShoeCard[] = [
     category: "Women",
   },
   {
-    id: 11,
+    id: 100011,
     image:
       "https://housershoes.com/cdn/shop/files/tommys.jpg?crop=region&crop_height=4000&crop_left=0&crop_top=1000&crop_width=4000&v=1741787900&width=4000",
     name: "Addidas Footwear Classic",
@@ -88,21 +88,21 @@ export const ShoesData: ShoeCard[] = [
     category: "Men",
   },
   {
-    id: 12,
+    id: 100012,
     image: "https://themewagon.github.io/stylish/images/card-item9.jpg",
     name: "NIKE Air Zoom",
     price: "$99",
     category: "Men",
   },
   {
-    id: 13,
+    id: 100013,
     image: "https://themewagon.github.io/stylish/images/card-item2.jpg",
     name: "NIKE Court Vision",
     price: "$119",
     category: "Women",
   },
   {
-    id: 14,
+    id: 100014,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe6GV2PnQ8j-kmBW8h2qJunwcVAUOi2OBYfA&s",
     name: "TREX Trail Runner",
@@ -110,7 +110,7 @@ export const ShoesData: ShoeCard[] = [
     category: "Women",
   },
   {
-    id: 15,
+    id: 100015,
     image:
       "https://affinity.com.pk/cdn/shop/products/image_de69f216-1119-411c-a0e4-ed6e142a425b.jpg?v=1645274467",
     name: "Adidas Ultraboost",
@@ -118,7 +118,7 @@ export const ShoesData: ShoeCard[] = [
     category: "Men",
   },
   {
-    id: 16,
+    id: 100016,
     image: "https://themewagon.github.io/stylish/images/card-item1.jpg",
     name: "PUMA RS-X",
     price: "$119",
