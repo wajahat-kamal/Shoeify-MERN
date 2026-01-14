@@ -20,12 +20,9 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart(state, action: PayloadAction<ShoeCard>) {
-      const item = state.items.find((i) => {
-        i.id === action.payload.id;
-      });
-
+      const item = state.items.find((item) => item.id === action.payload.id);
       if (item) {
-        item.quantity += 0;
+        item.quantity += 1;
       } else {
         state.items.push({ ...action.payload, quantity: 1 });
       }
@@ -33,7 +30,6 @@ const cartSlice = createSlice({
     removeFromCart(state, action: PayloadAction<number>) {
       state.items = state.items.filter((item) => item.id !== action.payload);
     },
-
     toggleCart(state) {
       state.isOpen = !state.isOpen;
     },
