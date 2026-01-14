@@ -70,7 +70,7 @@ function Products() {
               className={`
           relative px-4 py-1.5 sm:px-5 sm:py-2
           text-xs sm:text-sm font-medium rounded-full
-          border transition-all duration-300
+          border transition-all duration-300 cursor-pointer
           ${
             isActive
               ? "bg-(--primary) text-black border-(--primary) shadow-md"
