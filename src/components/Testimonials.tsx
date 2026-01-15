@@ -8,7 +8,7 @@ const Testimonials = () => {
   // speed in pixels per second
   const SPEED = 50;
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_, delta) => {
     x.set(x.get() - (SPEED * delta) / 1000);
 
     // reset position smoothly when half content passed
