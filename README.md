@@ -6,18 +6,19 @@ The project demonstrates best practices in frontend development, animations, and
 ---
 
 ## 🚀 Live Preview
+
 👉 https://shoeify-wk.vercel.app/
 
 ---
 
 ## 🛠 Tech Stack
 
-- **React** — Component-based UI development  
-- **TypeScript** — Type-safe, scalable codebase  
-- **JavaScript (ES6+)** — Core logic and interactions  
-- **Redux Toolkit** — Global state management (Cart system)  
-- **Tailwind CSS** — Utility-first modern styling  
-- **Framer Motion** — Smooth animations & transitions  
+- **React** — Component-based UI development
+- **TypeScript** — Type-safe, scalable codebase
+- **JavaScript (ES6+)** — Core logic and interactions
+- **Redux Toolkit** — Global state management (Cart system)
+- **Tailwind CSS** — Utility-first modern styling
+- **Framer Motion** — Smooth animations & transitions
 
 ---
 
