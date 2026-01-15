@@ -34,9 +34,9 @@ const Testimonials = () => {
 
       {/* Marquee */}
       <motion.div className="flex gap-6 will-change-transform" style={{ x }}>
-        {[...testimonials, ...testimonials].map((item) => (
+        {[...testimonials, ...testimonials].map((item, index) => (
           <div
-            key={`${item.id}`}
+            key={`${item.id}-${index}`}
             className="min-w-[280px] md:min-w-[320px]
               bg-(--secondary) border border-white/10
               rounded-2xl hover:border-(--primary) p-6 transition-all duration-300"

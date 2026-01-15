@@ -59,60 +59,62 @@ const Navbar: React.FC = () => {
             <span>SHOEIFY</span>
           </a>
 
-          <div className="flex flex-row gap-4">
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-4">
-              {navLinks.map(({ name, href }) => (
-                <a
-                  key={name}
-                  href={href}
-                  className="relative font-mono text-md font-medium text-zinc-600 hover:text-white transition-colors group"
-                >
-                  {name}
-                  <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
-                </a>
-              ))}
-            </div>
+          <div className="flex flex-row gap-1">
+            <div className="flex flex-row gap-4">
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center gap-4">
+                {navLinks.map(({ name, href }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    className="relative font-mono text-md font-medium text-zinc-600 hover:text-white transition-colors group"
+                  >
+                    {name}
+                    <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                  </a>
+                ))}
+              </div>
 
-            <button
-              type="button"
-              onClick={() => dispatch(toggleCart())}
-              aria-label="Open cart"
-              className="relative flex items-center justify-center pl-4 h-11 w-14
+              <button
+                type="button"
+                onClick={() => dispatch(toggleCart())}
+                aria-label="Open cart"
+                className="relative flex items-center justify-center pl-4 h-11 w-14
     md:border-l border-zinc-500/60
     transition-colors duration-200
     hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-(--primary)/40"
-            >
-              <img
-                src={cartImage}
-                alt="Cart"
-                className="h-8 w-8 object-contain opacity-90 pointer-events-none"
-                loading="lazy"
-              />
+              >
+                <img
+                  src={cartImage}
+                  alt="Cart"
+                  className="h-8 w-8 object-contain opacity-90 pointer-events-none"
+                  loading="lazy"
+                />
 
-              {totalItems > 0 && (
-                <span
-                  className="absolute -top-2 -right-2
+                {totalItems > 0 && (
+                  <span
+                    className="absolute -top-2 -right-2
         min-w-[20px] h-5 px-1
         bg-red-500 text-xs font-medium text-white
         flex items-center justify-center rounded-full"
-                >
-                  {totalItems}
-                </span>
-              )}
+                  >
+                    {totalItems}
+                  </span>
+                )}
+              </button>
+            </div>
+
+            {/* Mobile Toggle */}
+            <button
+              onClick={toggleMenu}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              className="md:hidden text-gray-200 hover:text-white transition-colors"
+            >
+              {isOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
-
-          {/* Mobile Toggle */}
-          <button
-            onClick={toggleMenu}
-            aria-label="Toggle navigation menu"
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            className="md:hidden text-gray-200 hover:text-white transition-colors"
-          >
-            {isOpen ? <X size={26} /> : <Menu size={26} />}
-          </button>
         </nav>
       </motion.header>
 
