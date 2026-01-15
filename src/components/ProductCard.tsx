@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       className="group bg-(--secondary) border border-white/10 rounded-2xl relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
     >
       {/* Image */}
-      <div className="relative w-full h-30 md:h-50 overflow-hidden rounded-t-2xl">
+      <div className="relative w-full h-30 md:h-45 overflow-hidden rounded-t-2xl">
         <img
           src={product.image}
           alt={product.name}
@@ -36,7 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       </div>
 
       {/* Product Info */}
-      <div className="p-1 md:p-3 flex flex-col gap-2">
+      <div className="p-1 md:p-2 flex flex-col gap-2">
         <div className="flex flex-row justify-between items-center ">
           <h3 className="text-white font-semibold text-xs md:text-md line-clamp-1">
             {product.name}
@@ -51,7 +51,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         <button
           onClick={() => dispatch(addToCart(product))}
           className="
-    flex items-center justify-center gap-2 px-2 md:px-4 py-1.5 md:py-2
+    flex items-center justify-center gap-2 px-2 md:px-3 py-1.5 md:py-2
     rounded-xl bg-(--primary)/80 text-white font-medium text-xs md:text-sm
     w-full transition-all duration-300
     hover:bg-(--primary)/80 hover:scale-102
