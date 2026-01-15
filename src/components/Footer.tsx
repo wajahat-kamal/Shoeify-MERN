@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
 function Footer() {
   return (
@@ -54,14 +54,6 @@ function Footer() {
                 Testimonials
               </a>
             </li>
-            <li>
-              <a
-                href="/#discount"
-                className="inline-block hover:text-(--primary) hover:underline underline-offset-4 transition-colors"
-              >
-                Discount
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -103,12 +95,6 @@ function Footer() {
             className="p-2 rounded-full hover:bg-white/60 hover:text-(--primary) transition-colors"
           >
             <Instagram size={20} />
-          </a>
-          <a
-            href="#"
-            className="p-2 rounded-full hover:bg-white/60 hover:text-(--primary) transition-colors"
-          >
-            <Linkedin size={20} />
           </a>
         </div>
       </div>

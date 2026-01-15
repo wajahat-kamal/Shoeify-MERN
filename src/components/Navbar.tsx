@@ -5,7 +5,6 @@ import logo from "../assets/images/logo.png";
 import cartImage from "../assets/images/cart-image.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../redux/cart/cartSlice";
-import type { RootState } from "@reduxjs/toolkit/query";
 
 interface NavLink {
   name: string;
