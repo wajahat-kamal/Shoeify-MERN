@@ -36,7 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       </div>
 
       {/* Product Info */}
-      <div className="p-1 md:p-2 flex flex-col gap-2">
+      <div className="p-2 flex flex-col gap-2">
         <div className="flex flex-row justify-between items-center ">
           <h3 className="text-white font-semibold text-xs md:text-md line-clamp-1">
             {product.name}

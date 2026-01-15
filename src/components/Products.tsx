@@ -10,7 +10,7 @@ function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "Men", "Women"];
 
-  const limitedShoes = ShoesData.slice(0, 8);
+  const limitedShoes = ShoesData.slice(0, 10);
 
   const filterdShoes =
     pathname === "/"
@@ -85,7 +85,7 @@ function Products() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-6 pb-8 md:px-15">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-6 px-6 pb-8 md:px-15">
         {filterdShoes.map((product, index) => (
           <ProductCard product={product} index={index} key={product.id} />
         ))}
