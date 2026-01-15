@@ -36,14 +36,14 @@ const Hero = () => {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#shopping"
+                href="/shopping"
                 className="inline-flex items-center justify-center rounded-full bg-(--primary) px-8 py-3 text-sm font-semibold text-black transition-all hover:bg-(--primary)/50 hover:scale-105"
               >
                 Shop Now
               </a>
 
               <a
-                href="#about-us"
+                href="/#about-us"
                 className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10"
               >
                 Learn More
