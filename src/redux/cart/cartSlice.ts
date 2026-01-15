@@ -3,6 +3,7 @@ import type { ShoeCard } from "../../assets/data/shoesData";
 
 const loadCartItems = () => {
   try {
+    if (typeof window === "undefined") return [];
     const data = localStorage.getItem("cartItems");
     return data ? JSON.parse(data) : [];
   } catch (error) {
