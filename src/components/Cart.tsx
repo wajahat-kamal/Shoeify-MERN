@@ -4,6 +4,7 @@ import { closeCart, checkout } from "../redux/cart/cartSlice";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import CartItem from "./CartItem";
+import cartImage from "../assets/images/cart-image.png";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -41,7 +42,15 @@ const Cart = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-white">Your Cart</h3>
+          <div className="text-2xl font-semibold text-white flex flex-row gap-1 items-center">
+            <img
+              src={cartImage}
+              alt="Cart"
+              className="h-7 w-7 md:h-10 md:w-10 object-contain opacity-90 pointer-events-none"
+              loading="lazy"
+            />
+            <h3>Your Cart</h3>
+          </div>
           <button
             onClick={() => dispatch(closeCart())}
             className="text-zinc-400 hover:text-white transition"
