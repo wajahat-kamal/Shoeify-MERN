@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import CartItem from "./CartItem";
 import cartImage from "../assets/images/cart-image.png";
+import { X } from "lucide-react";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ const Cart = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <div className="text-2xl font-semibold text-white flex flex-row gap-1 items-center">
+          <div className="text-xl md:text-2xl font-semibold text-white flex flex-row gap-1 items-center">
             <img
               src={cartImage}
               alt="Cart"
@@ -55,7 +56,7 @@ const Cart = () => {
             onClick={() => dispatch(closeCart())}
             className="text-zinc-400 hover:text-white transition"
           >
-            ✕
+            <X />
           </button>
         </div>
 
