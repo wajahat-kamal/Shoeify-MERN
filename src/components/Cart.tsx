@@ -3,7 +3,6 @@ import type { RootState } from "../redux/store";
 import {
   removeFromCart,
   closeCart,
-  type CartItem,
   plusQty,
   minusQty,
   checkout,
