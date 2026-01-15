@@ -10,12 +10,12 @@ const loadCartItems = () => {
   }
 };
 
-export interface CartItem extends ShoeCard {
+export interface CartItemType extends ShoeCard {
   quantity: number;
 }
 
 interface CartState {
-  items: CartItem[];
+  items: CartItemType[];
   isOpen: boolean;
 }
 
