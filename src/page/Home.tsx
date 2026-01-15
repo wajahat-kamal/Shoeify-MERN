@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../components/Hero";
 import About from "../components/AboutUs";
 import Services from "../components/Services";
@@ -12,7 +11,7 @@ function Home() {
       <About />
       <Services />
       <Products />
-      <Testimonials/>
+      <Testimonials />
     </div>
   );
 }
