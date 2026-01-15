@@ -1,6 +1,15 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { ShoeCard } from "../../assets/data/ShoesData";
 
+const loadCartItems = () => {
+  try {
+    const data = localStorage.getItem("cartItems");
+    return data ? JSON.parse(data) : [];
+  } catch (error) {
+    return [];
+  }
+};
+
 export interface CartItem extends ShoeCard {
   quantity: number;
 }
@@ -11,7 +20,7 @@ interface CartState {
 }
 
 const initialState: CartState = {
-  items: [],
+  items: loadCartItems(),
   isOpen: false,
 };
 
