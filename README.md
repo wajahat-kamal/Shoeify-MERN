@@ -35,5 +35,14 @@ The project demonstrates best practices in frontend development, animations, and
 
 ---
 
+## 📂 Project Structure
 
-
+src/
+├── assets/ # Images & data
+├── components/ # Reusable UI components
+├── pages/ # Application pages
+├── redux/
+│ ├── slices/ # Redux slices (cart)
+│ └── store.ts # Redux store
+├── App.tsx
+└── main.tsx
