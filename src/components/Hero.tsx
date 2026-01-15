@@ -1,4 +1,4 @@
-import bgImage from "../assets/images/bg-image.png";
+import bgImage from "../assets/images/bg-image.jpg";
 import { motion } from "framer-motion";
 
 const Hero = () => {
