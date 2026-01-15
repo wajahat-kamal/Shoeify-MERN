@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full bg-cover bg-center bg-no-repeat"
+      className="relative h-screen w-full bg-cover bg-center bg-fixed bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Content container */}
