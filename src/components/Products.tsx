@@ -38,15 +38,15 @@ function Products() {
         </div>
       ) : (
         <section
-          className="relative w-full h-90 py-24 px-6 md:px-20 bg-center bg-cover"
+          className="relative w-full h-90 py-24 px-6 md:px-20 bg-center bg-cover flex justify-center items-center"
           style={{
             backgroundImage: `url(${bgImage})`,
           }}
         >
           <div className="absolute inset-0 backdrop-blur-xs" />
-          <div className="absolute right-85 top-35 max-w-7xl mx-auto text-center">
+          <div className="z-40 max-w-7xl mx-auto text-center">
             {/* Heading */}
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-(--primary) mb-4">
+            <h1 className="text-2xl md:text-5xl font-bold tracking-tight text-(--primary) mb-4">
               Shop the Perfect Pair
             </h1>
 
