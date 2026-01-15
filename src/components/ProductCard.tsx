@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
-import type { ShoeCard } from "../assets/data/ShoesData";
+import type { ShoeCard } from "../assets/data/shoesData";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cart/cartSlice";
 

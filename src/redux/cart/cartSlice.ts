@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { ShoeCard } from "../../assets/data/ShoesData";
+import type { ShoeCard } from "../../assets/data/shoesData";
 
 const loadCartItems = () => {
   try {

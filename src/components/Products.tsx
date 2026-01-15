@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ShoesData } from "../assets/data/ShoesData";
+import { ShoesData } from "../assets/data/shoesData";
 import ProductCard from "./ProductCard";
 import { useLocation } from "react-router-dom";
 import bgImage from "../assets/images/shopping-page-bg-image.jpg";
