@@ -6,9 +6,14 @@ function Footer() {
       <div className="flex justify-between flex-col md:flex-row gap-10">
         {/* Logo & About */}
         <div>
-          <h2 className="text-3xl font-extrabold text-(--primary) tracking-wide">
-            SHOEIFY
-          </h2>
+          <a
+            href="/"
+            aria-label="Homepage"
+            className="flex items-center gap-2 text-xl font-mono font-semibold tracking-widest hover:opacity-90 transition-opacity"
+          >
+            <img src={logo} alt="Shoeify logo" className="w-10 h-10" />
+            <span>SHOEIFY</span>
+          </a>
           <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-sm">
             Shoeify delivers premium quality footwear designed for comfort,
             durability, and modern style. Step confidently, every day.
