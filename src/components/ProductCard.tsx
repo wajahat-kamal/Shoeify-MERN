@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         />
 
         {/* Category Badge */}
-        <span className="absolute top-3 left-3 px-3 py-1 text-xs md:font-semibold rounded-full bg-(--primary) text-black">
+        <span className="absolute top-3 left-3 px-3 py-1 text-xs md:font-semibold rounded-full bg-(--primary) text-white">
           {product.category}
         </span>
       </div>
