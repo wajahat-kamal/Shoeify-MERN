@@ -10,7 +10,7 @@ function Footer() {
           <a
             href="/"
             aria-label="Homepage"
-            className="flex items-center gap-2 text-xl font-mono font-semibold tracking-widest hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 text-2xl font-mono font-semibold tracking-widest hover:opacity-90 transition-opacity"
           >
             <img src={logo} alt="Shoeify logo" className="w-10 h-10" />
             <span>SHOEIFY</span>
